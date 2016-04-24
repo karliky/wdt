@@ -15,5 +15,15 @@ describe('WDT Parser', function() {
     it('should return a file handler', function (done) {
       wdt.loadWDT(filePath, done);
     });
+
+    it('should return the REVM data', function (done) {
+      const cb = (err, REVMData) => {
+        assert.equal(REVMData.header, 'REVM');
+        assert.equal(REVMData.version, 4);
+        assert.equal(REVMData.revision, 18);
+        done();
+      };
+      wdt.getREVM(cb);
+    });
   });
 });
