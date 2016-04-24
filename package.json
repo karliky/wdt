@@ -3,14 +3,13 @@
   "version": "1.0.0",
   "description": "WDT reader/writer",
   "author": "@k4rliky",
-  "license": "ISC",
+  "license": "WTFPL",
   "scripts": {
     "test": "mocha --compilers js:babel-register",
     "build": "babel source --presets babel-preset-es2015 --out-dir distribution",
     "prepublish": "npm run build"
   },
   "main": "distribution/index.js",
-  "license": "WTFPL",
   "jshintConfig": {
     "esnext": true,
     "node": true
