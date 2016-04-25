@@ -25,5 +25,13 @@ describe('WDT Parser', function() {
       };
       wdt.getREVM(cb);
     });
+
+    it('should return the MPHD data', function (done) {
+      const cb = (err, REVMData) => {
+        assert.equal(REVMData.header, 'DHPM');
+        done();
+      };
+      wdt.getMPHD(cb);
+    });
   });
 });
